@@ -1,5 +1,1 @@
-let userName = "Jerika";
-
-userName = "Jerk";
-
-console.log(userName);
+let currentResult = 0;
