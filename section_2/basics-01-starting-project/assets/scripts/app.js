@@ -10,7 +10,7 @@ function getUserNumberInput() {
 //  Generates and writes calculation log
 function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
   const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
-  outputResult(currentResult, calcDescription);
+  outputResult(currentResult, calcDescription); //from vendor file
 }
 
 function add() {
@@ -18,9 +18,15 @@ function add() {
   const initialResult = currentResult;
   currentResult += enteredNumber;
   //Can also use the plus(+) sign in FRONT of the string to convert strings to numbers
-  createAndWriteOutput("+", initialResult, enteredNumber); //from vendor file
-  logEntries.push(enteredNumber);
-  console.log(logEntries[1]);
+  createAndWriteOutput("+", initialResult, enteredNumber);
+  const logEntry = {
+    operation: "ADD",
+    prevResult: initialResult,
+    number: enteredNumber,
+    result: currentResult,
+  };
+  logEntries.push(logEntry);
+  console.log(logEntries);
 }
 
 function subtract() {
