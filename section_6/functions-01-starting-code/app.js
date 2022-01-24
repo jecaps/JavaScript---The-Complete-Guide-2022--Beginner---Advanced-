@@ -1,8 +1,10 @@
 const startGameBtn = document.getElementById("start-game-btn");
 
-const start = function () {
+start();
+
+function start() {
   console.log("Game is starting...");
-};
+}
 
 // const person = {
 //   greet: function greet() {
