@@ -28,19 +28,26 @@
 
 // console.log(personalData[1]);
 
-const hobbies = ["Sports", "Cooking"];
-hobbies.push("Reading"); // Adds elements at the end of the array
-hobbies.unshift("Coding"); // Adds elements at the beginning of the array
-const poppedValue = hobbies.pop(); // Removes elements from the end of the array
-hobbies.shift(); // Removes elements from the beginning of the array
-console.log(hobbies);
+// const hobbies = ["Sports", "Cooking"];
+// hobbies.push("Reading"); // Adds elements at the end of the array
+// hobbies.unshift("Coding"); // Adds elements at the beginning of the array
+// const poppedValue = hobbies.pop(); // Removes elements from the end of the array
+// hobbies.shift(); // Removes elements from the beginning of the array
+// console.log(hobbies);
 
-hobbies[1] = "Coding";
-// hobbies[5] = "Reading"; // rarely used
-console.log(hobbies, hobbies[4]);
+// hobbies[1] = "Coding";
+// // hobbies[5] = "Reading"; // rarely used
+// console.log(hobbies, hobbies[4]);
 
-hobbies.splice(1, 0, "Good Food");
-console.log(hobbies);
+// hobbies.splice(1, 0, "Good Food");
+// console.log(hobbies);
 
-const removedElements = hobbies.splice(-2, 1);
-console.log(hobbies);
+// const removedElements = hobbies.splice(-2, 1);
+// console.log(hobbies);
+
+const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+const storedResults = testResults.slice(-3, -1);
+
+testResults.push(5.91);
+
+console.log(storedResults, testResults);
