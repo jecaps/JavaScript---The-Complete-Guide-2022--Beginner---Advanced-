@@ -98,3 +98,6 @@ const taxAdjustedPrices = prices.map((price, idx, prices) => {
 const sortedPrices = prices.sort((a, b) => a - b);
 console.log(sortedPrices);
 console.log(sortedPrices.reverse());
+
+const filteredArray = prices.filter((price, index) => price > 6);
+console.log(filteredArray);
