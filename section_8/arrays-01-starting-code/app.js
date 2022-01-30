@@ -88,7 +88,7 @@
 const prices = [10.99, 5.99, 3.99, 6.59];
 const tax = 0.19;
 
-const taxAdjustedPrices = prices.map((price) => {
+const taxAdjustedPrices = prices.map((price, idx) => {
   const priceObj = { index: idx, taxAdjustedPrices: price * (1 + tax) };
   return priceObj;
 });
@@ -101,3 +101,13 @@ console.log(sortedPrices.reverse());
 
 const filteredArray = prices.filter((price) => price > 6);
 console.log(filteredArray);
+
+// let sum = 0;
+
+// prices.forEach((price) => (sum += price));
+
+// console.log(sum);
+
+const sum = prices.reduce((prevValue, curValue) => prevValue + curValue, 0);
+
+console.log(sum);
