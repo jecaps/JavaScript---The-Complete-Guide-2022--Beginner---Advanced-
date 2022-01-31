@@ -1,7 +1,7 @@
-const movieList = document.getElementById("movie-list");
+// const movieList = document.getElementById("movie-list");
 
-movieList.style["background-color"] = "red";
-movieList.style.display = "block";
+// movieList.style["background-color"] = "red";
+// movieList.style.display = "block";
 
 let person = {
   "first name": "Max",
@@ -10,6 +10,7 @@ let person = {
   greet: function () {
     alert("Hi there!");
   },
+  1.5: "hello",
 };
 
 // person.age = 31;
@@ -19,3 +20,4 @@ delete person.age;
 person.isAdmin = true;
 
 console.log(person["hobbies"]);
+console.log(person[1.5]);
