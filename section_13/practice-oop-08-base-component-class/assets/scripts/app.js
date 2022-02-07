@@ -68,7 +68,7 @@ class Tooltip extends Component {
     const y = hostElPosTop + hostElHeight - parentElementScrolling - 10;
 
     tooltipElement.style.position = "absolute";
-    tooltipElement.style.left = x + "px";
+    tooltipElement.style.left = x + "px"; // 500px
     tooltipElement.style.top = y + "px";
 
     tooltipElement.addEventListener("click", this.closeTooltip);
@@ -170,6 +170,17 @@ class App {
     finishedProjectsList.setSwitchHandlerFunction(
       activeProjectsList.addProject.bind(activeProjectsList)
     );
+
+    document
+      .getElementById("start-analytics-btn")
+      .addEventListener("click", this.startAnalytics);
+  }
+
+  static startAnalytics() {
+    const analyticsScript = document.createElement("script");
+    analyticsScript.src = "assets/scripts/analytics.js";
+    analyticsScript.defer = true;
+    document.head.append(analyticsScript);
   }
 }
 
