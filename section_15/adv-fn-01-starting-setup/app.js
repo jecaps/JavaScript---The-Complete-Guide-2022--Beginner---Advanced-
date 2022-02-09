@@ -44,7 +44,7 @@ function createTaxCalulator(tax) {
   return calculateTax;
 }
 
-multiplier = 1.2;
+// multiplier = 1.2;
 
 const calculateVatAmount = createTaxCalulator(0.19)(200);
 const calculateIncomeTaxAmount = createTaxCalulator(0.25)(200);
@@ -55,3 +55,16 @@ const calculateIncomeTaxAmount = createTaxCalulator(0.25)(200);
 
 console.log(calculateVatAmount);
 console.log(calculateIncomeTaxAmount);
+
+let userName = "Max";
+
+function greetUser() {
+  // let name = "Anna";
+  console.log("Hi " + name);
+}
+
+let name = "Maximilian";
+
+userName = "Manuel";
+
+greetUser();
