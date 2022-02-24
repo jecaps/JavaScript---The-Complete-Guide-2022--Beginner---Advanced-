@@ -23,7 +23,10 @@ function sendHttpRequest(method, url, data) {
   // xhr.send(JSON.stringify(data));
   // });
   // return promise;
-  return fetch(url).then((response) => {
+  return fetch(url, {
+    method: method,
+    body: JSON.stringify(data),
+  }).then((response) => {
     return response.json();
   });
 }
@@ -32,7 +35,7 @@ async function fetchPosts() {
   // try {
   const responseData = await sendHttpRequest(
     "GET",
-    "https://jsonplaceholder.typicode.com/pos"
+    "https://jsonplaceholder.typicode.com/posts"
   );
   const listsOfPosts = responseData;
   for (const post of listsOfPosts) {
